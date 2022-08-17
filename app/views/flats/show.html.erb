@@ -1,0 +1,33 @@
+<div class=" banner" style="background-image: url(<%= @flat.image %>)">
+</div>
+<div class="container flat-info">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="bg-light p-5 mb-3">
+        <h1 class="fs-4"><%= @flat.name %></h1>
+        <p><%= @flat.address.split(" ").last %></p>
+      </div>
+      <div class="bg-light p-5">
+        <h4>A bit more about this flat</h4>
+        <p><%= @flat.description %></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26634658.512503155!2d-97.01272505!3d35.4225708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s<%= @flat.address.split(' ').last %>}%20usa!5e0!3m2!1sen!2sfr!4v1660761450391!5m2!1sen!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="bg-light p-5 mb-3">
+        <h4>Book this place</h4>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">From</span>
+          <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">To</span>
+          <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <a href="" class="btn btn-success">Reservation</a>
+      </div>
+      <div class="bg-light p-5 mb-3"></div>
+      <div class="bg-light p-5"></div>
+    </div>
+  </div>
+</div>

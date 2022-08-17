@@ -1,0 +1,22 @@
+<div class="container mt-3 mb-5">
+  <h1>All our flats</h1>
+  <p>All <%= @flats.count %> flats</p>
+  <div class="wrapper card-group">
+    <% @flats.each do |flat| %>
+      <div class="card rounded">
+        <img src="<%= flat.image %>" class="flat-img obj-fit">
+        <div class="card-body bg-grey p-3">
+          <h5><%= flat.name %></h5>
+          <p><%= flat.address.split(" ").last %></h5>
+          <p>🧑🏻‍🤝‍🧑🏻 <%= flat.number_of_guests %> guests - 💲<%= flat.price_per_night %>/night</p>
+        </div>
+        <div class="card-footer p-3">
+          <%= link_to "More info", flat_path(flat), class: "btn btn-outline-primary" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-outline-secondary"%>
+          <%= link_to "Remove", flat_path(flat), class: "btn btn-outline-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
